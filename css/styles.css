@@ -54,7 +54,7 @@
   align-items: center;
   /* width: 1300px; */
   height: 500px;
-  background-image: url('/assets/hero/coff2-header.png');
+  background-image: url('assets/hero/coff2-header.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
