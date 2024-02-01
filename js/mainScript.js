@@ -52,7 +52,7 @@ function changeImage() {
     var mainImage = document.querySelector('.main-image');
 
     if (mainImage.src.includes('coff2-header.png')) {
-        mainImage.src = './assets/hero/yellow.png';
+        mainImage.src = 'assets/hero/yellow.png';
         mainImage.style.width = '100%';
         mainImage.style.height = 'auto';
     } else {
