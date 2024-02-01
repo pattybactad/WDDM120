@@ -1,3 +1,4 @@
+/* fonts source */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
@@ -71,12 +72,14 @@ body.dark-mode {
     font-family: "Montserrat", sans-serif;
 }
 
+/* card container */
 .coffee-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
+/* coffees listed in the page */
 .coffee-item {
     width: 150px;
     margin: 10px;
@@ -88,16 +91,20 @@ body.dark-mode {
     color: #000;
 }
 
+/* toggling background color */
 body.dark-mode .coffee-item {
     color: #696868;
 }
 
+
+/* coffee image sizes */
 .coffee-image {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
+/* add to cart button style */
 .add-to-cart-button {
     background-color: #02b5b2;
     color: #fff;

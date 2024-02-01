@@ -1,18 +1,21 @@
-// mainScript.js
-
 var cartItems = [];
 
+// adding to cart function
 function addToCart(itemName, itemPrice) {
     var newItem = { name: itemName, price: itemPrice };
     cartItems.push(newItem);
     updateCart();
 }
 
+
+// removing from cart function
 function removeFromCart(index) {
     cartItems.splice(index, 1);
     updateCart();
 }
 
+
+// adding / removing items from the cart
 function updateCart() {
     var cartContainer = document.getElementById("cart-container");
     cartContainer.innerHTML = "";
@@ -39,15 +42,19 @@ function updateCart() {
     }
 }
 
+
+//toggling background color
 function toggleBackgroundColor() {
     var body = document.body;
     body.classList.toggle("dark-mode");
 }
 
+//mouse hover pop-up message function
 function displayPopup() {
     alert("Welcome to Safaia Coffee! Enjoy our premium roast coffee.");
 }
 
+//change hero banner function
 function changeImage() {
     var mainImage = document.querySelector('.main-image');
 
