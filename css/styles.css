@@ -1,285 +1,123 @@
-/*----------NAV BAR----------*/
-.container {
-    width: 100%;
-    min-height: 100vh;
-    padding-left: 1em;
-    padding-right: 1em;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  
-  .navbar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    padding-bottom: 5px;
-  }
-  
-  .logo {
-    width: 100px;
-    cursor: pointer;
-    margin: 20px, 0;
-  }
-  
-  nav {
-    flex: 1;
-    text-align: right;
-  }
-  
-  nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 60px;
-  }
-  
-  nav ul li a {
-    float: left;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: black;
-  }
-  
-  nav ul li a:hover {
-    color: rgb(84, 124, 241);
-    text-decoration: none;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-/*----------HERO BANNER----------*/
-.hero-image{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* width: 1300px; */
-  height: 500px;
-  background-image: url('assets/hero/coff2-header.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  /* color: white; */
-}
-
-
-/*----------BODY OF THE WEBSITE----------*/
 body {
-  font-family: "Quicksand", sans-serif;
-  background-color: rgb(234, 234, 35);
-  margin: 0;
-  padding: 0px 0px 0px 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 226);
+    margin: 0;
+    padding: 0px 0px 0px 0px;
 }
 
-/*----------CATEGORIES BUTTON----------*/
-.button-container {
-  text-align: center;
-}
-
-.btn {
-    flex: 1;
+header {
+    background-color: #001FFF;
+    padding-top: 20px;
     text-align: center;
-}
- 
-.btn:hover {
-    background-color: rgb(241, 84, 84);
     color: white;
-  }
-
-/*----------EXPLORE OUR COLLECTIONS----------*/
-/* .collection-heading {
-  text-align: center;
-  font-size: 30px;
-  color: black;
-  padding: 50px 0px 20px 0px;
-} */
-
-/* Custom styles for top-aligned alerts */
-#liveAlertPlaceholder {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  z-index: 1000;
 }
 
-.custom-alert {
-  margin-bottom: 10px;
-  border-radius: 0;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+.container {
+    display: flex;
 }
 
-.custom-alert.show {
-  opacity: 1;
-  transform: translateY(0);
+.sidebar {
+    background-color: #333;
+    padding: 15px;
+    color: white;
+    width: 200px;
+    height: 150vh;
+    box-sizing: border-box;
 }
 
-.custom-alert .close {
-  position: absolute;
-  top: 5px;
-  right: 10px;
+.sidebar a,
+.sidebar button {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-/*----------BOOK COLLECTIONS----------*/
-
-.row {
-    max-width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    margin-left: 55px;
-    padding: 0px;
+.sidebar a:hover,
+.sidebar button:hover {
+    background-color: #02b5b2;
 }
 
-.col {
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.main-content {
+    flex-grow: 1;
     padding: 20px;
-    align-items: center;
-    background-size: fill;
 }
 
-.card-img-top {
-    width: 300px;
-    height: 400px;
-    align-items: center;
+.main-content .main-image {
+    max-width: 100%;
     border-radius: 20px;
 }
 
-p a {
-    text-decoration: none;
-    color: #313131;
-    font-size: 16px;
-}
-
-p a:hover {
-    color: rgb(84, 124, 241);
-}
-
-
-/*----------COFFEE CARDS----------*/
-.collections-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding-bottom: 30px;
-}
-
-.coffee-cards {
-  text-align: center;
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-  padding: 0px 0px 0px 0px;
-}
-
-
-
-/*----------FAQs----------*/
-.faqs {
-  font-size: 30px;
-  color: #313131;
-  font-weight: bold;
-  text-align: center;
-  padding: 50px 0px 20px 0px;
-}
-
-
-/*----------FOOTER----------*/
-.info-footer {
-    display: block;
-    width: 100%;
-    height: 400px;
-    background-color: #212121;
-}
-  
-.info-footer img {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin: auto;
-    width: 200px;
-    height: 120px;
-    padding-top: 20px;
-    fill: white;
-}
-
-.followus {
-    color: white;
-    text-align: center;
-}
-
-.fa {
-    margin: 10px;
-    font-size: 20px;
-    text-align: center;
-    background-color: white;
-    background-size: fill;
-    border: #f4f4f4 1px solid;
-    border-radius: 50px;
-}
-
-.fa-facebook {
-    background: cover;
-    color: white;
-    background-color: #3b5998;
-    width: 20px;
-    height: 20px;
-    align-items: center;
-    padding: 10px;
-    opacity: 1;
-}
-
-.fa-twitter {
-    background: #55acee;
-    background-size: fill;
-    color: white;
-    width: 20px;
-    height: 20px;
-    align-items: center;
-    padding: 10px;
-}
-
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-    background-size: fill;
-    color: white;
-    width: 20px;
-    height: 20px;
-    align-items: center;
-    padding: 10px;
-}
-
-.fa-pinterest {
-    background: red;
-    color: white;
-    background-size: fill;
-    color: white;
-    width: 20px;
-    height: 20px;
-    align-items: center;
-    padding: 10px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-    text-decoration: none;
-    border: white 1px solid;
-}
-
 .footer {
-    color: white;
-    margin: auto;
+    background-color: #001FFF;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px;
+    margin-top: 0px;
+    font-family: "Montserrat", sans-serif;
 }
 
-.privacy {
-    font-size: 11px;
-    color: rgb(242, 242, 242, 0.5);
-    font-weight: 300;
+.coffee-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.privacy:hover {
-    color: #55acee;
-    text-decoration: none;
+.coffee-item {
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+body.dark-mode .coffee-item {
+    color: #696868;
+}
+
+.coffee-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.add-to-cart-button {
+    background-color: #02b5b2;
+    color: #fff;
+    border: none;
+    padding: 8px;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #005555;
+}
+
+@media only screen and (max-width: 620px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
 }

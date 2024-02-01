@@ -1,233 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
     <title>Safaia Coffee</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Page Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SOCMED buttons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    </head>
+</head>
 
-    <body>
-        <div class="container">
-            <!-------------------------NAV BAR----------------------------->
-            <div class="navbar">
-                <a href="/index.html"><img src="./assets/logo-blue.png" width="140" height="65"></a>
-            <nav>
-                <ul>
-                <li><a href="#">Shop all</a></li>
-                <li><a href="#">Coffee Beans</a></li>
-                <li><a href="#">Merch</a></li>
-                </ul>
-            </nav>
-            </div>
+<body>
+    <header>
+        <!-- mouse hover pop-up message function -->
+        <a href="#" onmouseover="displayPopup()">
+            <img src="./assets/logo/logo-white.png" width="350" height="200">
+        </a>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <!-- toggling background color -->
+            <button id="toggleColorButton" class="sidebar-button" onclick="toggleBackgroundColor()">Toggle Color</button>
+            <!-- Add the new button to change the image -->
+            <button class="sidebar-button" onclick="changeImage()">Change Banner</button>
+            <a href="./index.html">Home</a>
+            <a href="#">Coffee </a>
+            <a href="#">Matcha & Tea</a>
+            <a href="#">Merch</a>
+            <!-- Cart container -->
+            <div id="cart-container"></div><br>
             
-            <!-------------------------HERO BANNER----------------------------->
-            <div class="hero-image">
-                
-            </div>
-            
-            <!-------------------------COFFEE CARDS----------------------------->
-            <div style="background-color: #001FFF;"><br>
-                <p class ="coffeecollection-container">
-                    <h1 class="coffee-cards">Savor the rich taste of our premium roast coffee</h1>
-                </p>
-                <br>
-                <div class="collections-container">
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/coffees/c1.jpeg" class="card-img-top" alt="c1">
-                        <div class="card-body">
-                            <h5 class="card-title">Creamy Cappucino</h5>
-                            <p class="card-text">$2.59</p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/coffees/c2.jpeg" class="card-img-top" alt="c2">
-                        <div class="card-body">
-                          <h5 class="card-title">Black Coffee</h5>
-                          <p class="card-text">$ 1.89</p>
-                          <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas2">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/coffees/c3.jpeg" class="card-img-top" alt="c3">
-                        <div class="card-body">
-                          <h5 class="card-title">Cold Brew</h5>
-                          <p class="card-text">$3.49</p>
-                          <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas3">Add to cart</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="assets/coffees/c4.jpeg" class="card-img-top" alt="c4">
-                        <div class="card-body">
-                          <h5 class="card-title">Iced Latte</h5>
-                          <p class="card-text">$2.49</p>
-                          <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas4">Add to cart</a>
-                        </div>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body" style="height: 75vh;">
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- OFFCANVAS ELEMENTS -->
-                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas1" aria-labelledby="offcanvas1Label">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvas1Label">They Both Die At The End <i>by Adam Silvera</i></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="/assets/images/collections/book5.jpeg" alt="They Both Die At The End Cover" class="img-fluid" style="max-width: 100%; height: auto;"><br><br>
-                            <p>Mateo and Rufus are total strangers, but, for different reasons, they're both looking to make a new friend on their End Day. The good news: There's an app for that. It's called the Last Friend, and through it, Rufus and Mateo are about to meet up for one last great adventure—to live a lifetime in a single day.</p>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas2" aria-labelledby="offcanvas2Label">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvas2Label">The Catcher in the Rye <i>by J. D. Salinger</i></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="/assets/images/collections/book6.jpeg" alt="They Both Die At The End Cover" class="img-fluid" style="max-width: 100%; height: auto;"><br><br>
-                            <p>The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school. Confused and disillusioned, Holden searches for truth and rails against the “phoniness” of the adult world.</p>
-                        </div>
-                    </div>
-                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas3" aria-labelledby="offcanva3Label">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvas3Label">Will Grayson, Will Grayson <i>by David Levithan and John Green</i></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="/assets/images/collections/book7.jpeg" alt="They Both Die At The End Cover" class="img-fluid" style="max-width: 100%; height: auto;"><br><br>
-                            <p>In the suburbs of Chicago, two teens named Will Grayson — one gay, one straight — have lived their lives completely unaware of the other's existence. But that changes one fateful night when their worlds collide. Their lives begin to intertwine and each Will Grayson begins to question who he really is.</p>
-                        </div>
-                    </div>
-                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvas4" aria-labelledby="offcanvas4Label">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvas4Label">Why We Took The Car <i>by Wolfgang Herrndorf</i></h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <img src="/assets/images/collections/book8.jpeg" alt="They Both Die At The End Cover" class="img-fluid" style="max-width: 100%; height: auto;"><br><br>
-                            <p>At fourteen, Mike has a dysfunctional family life, no friends and an unrequited crush on his classmate Natalie. He is reluctantly drawn into friendship with the new pupil Tschik, another misfit at school. During the summer vacation they take off in a 'borrowed' Lada to find Tschik's mythical roots in the south.
-                            </p>
-                        </div>
-                    </div>
+        </nav>
+
+        <div class="main-content">
+            <img src="./assets/hero/coff2-header.png" alt="hero" class="main-image">
+            <h2 class="english" style="text-align:center;">Savor the rich taste of our premium roast coffee</h2>
+
+            <!-- Container for coffee items -->
+            <div class="coffee-container">
+                <!-- Coffee Item 1 -->
+                <div class="coffee-item">
+                    <img src="./assets/coffees/c1.jpeg" alt="Coffee 1" class="coffee-image">
+                    <h3>Coffee Blend 1</h3>
+                    <p>Smooth and flavorful blend</p>
+                    <p>$10.99</p>
+                    <button class="add-to-cart-button" onclick="addToCart('Coffee Blend 1', 10.99)">Add to Cart</button>
+                </div>
+
+                <!-- Coffee Item 2 -->
+                <div class="coffee-item">
+                    <img src="./assets/coffees/c2.jpeg" alt="Coffee 2" class="coffee-image">
+                    <h3>Dark Roast</h3>
+                    <p>Rich and bold flavor</p>
+                    <p>$12.99</p>
+                    <button class="add-to-cart-button" onclick="addToCart('Dark Roast', 12.99)">Add to Cart</button>
+                </div>
+
+                <!-- Coffee Item 3 -->
+                <div class="coffee-item">
+                    <img src="./assets/coffees/c3.jpeg" alt="Coffee 3" class="coffee-image">
+                    <h3>Decaf Blend</h3>
+                    <p>For those who prefer decaffeinated</p>
+                    <p>$9.99</p>
+                    <button class="add-to-cart-button" onclick="addToCart('Decaf Blend', 9.99)">Add to Cart</button>
+                </div>
+
+                <!-- Coffee Item 4 -->
+                <div class="coffee-item">
+                    <img src="./assets/coffees/c4.jpeg" alt="Coffee 4" class="coffee-image">
+                    <h3>Flavored Coffee</h3>
+                    <p>Exciting flavors to awaken your senses</p>
+                    <p>$11.99</p>
+                    <button class="add-to-cart-button" onclick="addToCart('Flavored Coffee', 11.99)">Add to Cart</button>
                 </div>
             </div>
+            <!-- End of coffee container -->
+        </div>
+    </div>
 
-            <script>
-                // Function to toggle star color
-                function toggleStar(element) {
-                    element.classList.toggle("active");
-                }
-            </script>
+    <div class="footer">© 2024 Saphaia Coffee - Patty Bactad. All Rights Reserved.</div>
 
-            <!------------------------- FAQs ----------------------------->
-            <div>
-                <p class="faqs">FAQs
-                    <p style="font-size: 16px; text-align: center;">Read on our frequently asked questions </p>
-                </p>
-                <br>
-                <div class="accordion" id="accordionExample">
-                    <!-- FAQ1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            How do I participate in discussions and reviews?
-                        </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Answer:</strong> In order to participate in discussions and leave reviews, you need to Sign Up and create an account with us.
-                        </div>
-                        </div>
-                    </div>
+    <!-- js code -->
+    <script src="mainScript.js"></script>
+</body>
 
-                    <!-- FAQ2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Is Papyrus available as a mobile app?
-                        </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Answer:</strong> Unfortunately, we do not have an app yet. However, you can still view Papyrus via mobile view.
-                        </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Is my reading activity on Papyrus visible to the public?
-                        </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Answer:</strong> No, we make sure that our member's privacy is protected. Only the reviews our members leave on a book, or the ratings will be visible to the public.
-                        </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ4 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            How do I leave a review for the book that I liked?
-                        </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>Answer:</strong> You can leave a book review once you have an account with us.
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-
-            
-                <!-------------------------FOOTER----------------------------->
-                <div class="info-footer">
-                    <img src="./assets/logo.png"><br><br>
-                    <div>
-                    <p class="followus">Follow Us<br>
-                        <!-- Add font awesome icons -->
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
-                        <a href="#" class="fa fa-pinterest"></a>
-                    </p><br><br>
-                    <footer class="footer" style="text-align:center;">
-                        &#169 2024 Saphaia Coffee - Patty Bactad. All Rights Reserved. <br><br>
-                        <p class="privacy">Privacy Policy | Terms and Conditions</p>
-                        <br>
-                    </footer><br>
-            
-                    </div>
-                </div>
-        
-            </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
 </html>
